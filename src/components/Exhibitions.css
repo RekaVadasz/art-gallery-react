@@ -1,0 +1,40 @@
+/* 
+font-family: 'Lora', serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+#exhibitions-container {
+    max-width: 1300px;
+    margin: 50px auto 0;
+    padding: 0 20px;
+}
+
+.online-exhibitions {
+    font-family: 'Lora', serif;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.online-exhibitions>h1 {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+.online-exhibitions>h2 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+@media screen and (max-width:370px) {
+    .online-exhibitions>h1 {
+        font-size: 31px;
+    }
+
+    .online-exhibitions>h2 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,172 @@
+#login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    /* visibility: hidden; */
+}
+
+.login-container > input {
+    margin-bottom: 10px;
+
+}
+
+.login-head {
+    margin-bottom: 30px;
+
+    font-size: 100px;
+}
+
+.login-email {
+    width: 249px;
+    height: 40px;
+
+    padding: 10px;
+
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+}
+
+.login-email::placeholder {
+    color: #dad7d7d7;
+    text-transform: capitalize;
+}
+
+.login-email:focus {
+    border: 1px solid #000;
+}
+
+.login-password {
+    width: 249px;
+    height: 40px;
+
+    padding: 10px;
+
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+}
+
+.login-password::placeholder {
+    color: #dad7d7d7;
+    text-transform: capitalize;
+}
+
+.login-password:focus {
+    border: 1px solid #000;
+}
+
+.login-button {
+    width: 249px;
+    height: 40px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #000;
+    border-radius: 4px;
+
+    text-align: center;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.login-button:hover {
+    background-color: #000;
+
+    color: #fff;
+}
+
+.login-details {
+    width: 249px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.login-details > label {
+    display: flex;
+    flex-direction: row;
+
+    gap: 5px;
+}
+
+.login-details > label > input {
+    cursor: pointer;
+}
+
+.login-p1 {
+    font-size: 10px;
+
+    text-transform: capitalize;
+}
+
+.login-navlink {
+    font-size: 10px;
+
+    text-transform: capitalize;
+} 
+
+.or-login-with {
+    display: flex;
+    flex-direction: row;
+
+    margin: 20px 0; 
+}
+
+.or-login-with > p {
+    margin: 0 20px;
+
+    font-size: 10px;
+
+    color: #9c9b9bd7;
+}
+
+.acc-details {
+    margin-bottom: 20px;
+}
+
+.sign-out {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+}
+
+.dont-have {
+    display: flex;
+    flex-direction: row;
+
+    margin:0 0 20px 0;
+}
+
+.dont-have > p {
+    margin: 0 20px 0 20px;
+
+    font-size: 10px;
+
+    color: #9c9b9bd7;
+}
+
+hr {
+    border:1px solid #dad7d7d7;
+
+    background-color: #dad7d7d7;
+
+    transform:rotate(90deg);
+}
+

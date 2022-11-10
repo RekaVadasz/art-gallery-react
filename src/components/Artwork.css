@@ -1,0 +1,246 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+a img {
+    border: none;
+}
+
+button,
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+button,
+textarea,
+select {
+    appearance: none !important;
+    border-radius: 0;
+}
+
+/* custom CSS - artwork component */
+
+.artwork-container {
+    max-width: 1300px;
+    margin: 64px auto 162px;
+
+    padding: 0 20px;
+    /*     border: solid black 1px;
+ */
+}
+
+.artwork-container h1 {
+    font-family: 'Lora', serif;
+    font-size: 61px;
+    letter-spacing: 0.09em;
+}
+
+.artwork-container h3 {
+    font-family: 'Lora', serif;
+    font-size: 33px;
+    letter-spacing: 0.09em;
+}
+
+/* images section */
+.main-image-container {
+    position: relative;
+    width: fit-content;
+    margin: 43px auto 32px;
+}
+
+.main-image-container img {
+    max-width: 820px;
+    max-height: 95vh;
+    object-fit: cover;
+}
+
+
+.additional-images-container img {
+    width: 150px;
+    height: 150px;
+    margin: 0 10px 0;
+    cursor: pointer;
+}
+
+.additional-image-darken {
+    filter: brightness(60%);
+    transition-duration: .3s;
+}
+
+/* icons */
+.artwork-container i {
+    position: absolute;
+}
+
+.fa-expand {
+    top: 10px;
+    right: 10px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+    transition-duration: .1s;
+    transition-delay: .1s;
+}
+
+.fa-expand:hover {
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.artwork-container .fa-bookmark {
+    right: 26px;
+    bottom: 26px;
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+    transition-duration: .1s;
+    transition-delay: .1s;
+}
+
+.artwork-container .fa-bookmark:hover {
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* data section */
+.artwork-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+    padding: 50px;
+}
+
+.artwork-data-inner {
+    display: flex;
+    flex-direction: column;
+    width: 580px;
+    text-align: left;
+}
+
+.artwork-data-inner div {
+    margin-bottom: 30px;
+}
+
+.artwork-data p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.artwork-data div div p:nth-child(1) {
+    font-weight: 600;
+}
+
+/* button */
+.artwork-container button {
+   /* 
+    width: 317px;
+    height: 57px;
+ */
+    padding: 15px 30px;
+
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 0.05em;
+    transition: transform .2s;
+}
+
+.artwork-container button:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+/* expanded-image */
+.expanded-image {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+
+    padding: 20px;
+
+    z-index: 1000;
+
+    background-color: rgba(0, 0, 0, .65);
+}
+
+.expanded-image img {
+    max-width: 96vw;
+    max-height: 96vh;
+}
+
+.close-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 10px;
+    border: 1px solid black;
+
+
+    color: white;
+    font-size: 40px;
+
+    cursor: pointer;
+
+    z-index: 1500;
+
+    transition-duration: .3s;
+    transition-delay: .1s;
+}
+
+.close-container:hover{
+    background-color: white;
+    color: black;
+
+    text-shadow: 0 4px 6px rgba(0, 0, 0, .6);
+
+    border: 1px solid black;
+}
+
+/* Responsivity */
+
+@media screen and (max-width:850px) {
+    .artwork-container h1 {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .artwork-container h1 {
+        font-size: 35px;
+    }
+
+    .artwork-container h3 {
+        font-size: 22px;
+    }
+}

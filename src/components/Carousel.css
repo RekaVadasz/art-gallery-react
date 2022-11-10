@@ -1,0 +1,336 @@
+/* carousel styles */
+section#carousel {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.social {
+  width: 62px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 22px;
+}
+
+.social > i {
+  margin: 15px;
+  padding-bottom: 7px;
+
+  color: #000;
+}
+
+.carousel-socials {
+    display: inline-block;
+    position: relative;
+    color: #000;
+}
+
+.carousel-socials::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  border-radius: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.carousel-socials:hover::after{
+    transform: scaleX(1);
+    transform-origin: left
+}
+
+div.carousel {
+  position: relative;
+  z-index: 0;
+  height: 800px;
+  max-height: 800px;
+  width: 100%;
+}
+
+.carousel__slide {
+  /* border-top-left-radius: 28px;
+    border-top-right-radius: 28px; */
+}
+
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+
+  95% {
+    left: 100%;
+  }
+
+  98% {
+    left: 100%;
+  }
+
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+
+  95% {
+    left: -300%;
+  }
+
+  98% {
+    left: -300%;
+  }
+
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+
+  97% {
+    scroll-snap-align: none;
+  }
+
+  99% {
+    scroll-snap-align: none;
+  }
+
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+/* body {
+  max-width: 37.5rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  font-family: 'Lato', sans-serif;
+} */
+
+div.carousel {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  /* thumb and track color */
+  scrollbar-width: 0px;
+}
+
+div.carousel::-webkit-scrollbar {
+  width: 0;
+}
+
+div.carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+div.carousel::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+div.carousel {
+  -ms-overflow-style: none;
+}
+
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  position: relative;
+  padding-top: 0;
+  perspective: 100px;
+}
+
+.carousel__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow-x: hidden;
+  counter-reset: item;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  max-height: 800px;
+  overflow-y: hidden;
+}
+
+.carousel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  counter-increment: item;
+}
+
+.carousel__slide:nth-child(even) {
+  background-color: var(--dark-pink);
+}
+
+li#carousel__slide1 {
+  color:black;
+  /* background-image: url("../../public/astronaut-helmet.png");  */
+}
+
+.carousel-image-container > img {
+  margin: 20px auto 0;
+  /* background: url("../assets/astronaut-helmet.png") center center no-repeat cover;  */
+  width: 100%;
+  height:100%;
+  max-width: 400px;
+  max-height: 400px;
+  padding: 0 30px;
+  filter: drop-shadow(-10px 12px 14px rgba(0, 0, 0, 0.32));
+  z-index:2;
+}
+
+li#carousel__slide2 {
+  /* background: red; */
+
+}
+
+li#carousel__slide3 {
+  /* background: pink; */
+}
+
+li#carousel__slide4 {
+  /* background: brown; */
+}
+
+.carousel__slide:before {
+  /* content: counter(item); */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -40%, 70px);
+  color: #fff;
+  font-size: 2em;
+}
+
+.carousel__snapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__snapper {
+    animation-name: none;
+  }
+}
+
+.carousel:hover .carousel__snapper,
+.carousel:focus-within .carousel__snapper {}
+
+.carousel::before,
+.carousel::after,
+.carousel__prev,
+.carousel__next {
+  position: absolute;
+  top: 0;
+  margin-top: 37.5%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  font-size: 0;
+  outline: 0;
+}
+
+.carousel__navigation {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 64px;
+  display: flex;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: #000;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+
+li.carousel__navigation-item {
+  margin: 0 20px;
+}
+
+li.carousel__navigation-item:active {
+  background-color: transparent;
+}
+
+.slider-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 21px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 5%;
+}
+
+.slider-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 18px;
+  margin: 0 20%;
+}
+
+h2.slider-title::after {
+  display: block;
+  content: "";
+  height: 61px;
+  width: 2px;
+  background: #000;
+  position: relative;
+  margin: 29px auto 36px;
+}
+
+/* end of carousel styles */

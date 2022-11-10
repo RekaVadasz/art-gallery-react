@@ -1,0 +1,102 @@
+.exhibition-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    padding: 50px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.exhibition-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: start;
+}
+
+.exhibition-details>h4 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.exhibition-details>p {
+    padding-left: 40px;
+
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.exhibition-details > button{
+    display: flex;
+    justify-content: end;
+}
+
+.explore-btn {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+
+    width: 160px;
+    padding: 5px 0;
+
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    transition-duration: .3s;
+    transition-delay: .1s;
+}
+
+.explore-btn:hover {
+    width: 210px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, .6);
+}
+
+.explore-btn>div {
+    width: 100%;
+    height: 2px;
+
+    margin: auto 0;
+
+    background-color: black;
+}
+
+.exhibition-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exhibition-image-container>img {
+    width: 250px;
+    height: 270px;
+
+    object-fit: cover;
+    overflow: hidden;
+}
+
+@media screen and (max-width:600px) {
+    .exhibition-container {
+        flex-wrap: wrap;
+    }
+
+    .exhibition-image-container {
+        margin: 0 auto;
+    }
+
+    .exhibition-details>p {
+        padding-left: 10%;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .exhibition-image-container>img {
+        width: 100%;
+        height: 100%;
+    }
+}
