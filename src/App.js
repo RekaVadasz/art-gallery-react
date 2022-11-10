@@ -14,25 +14,16 @@ import NoPage from './components/NoPage';
 function App() {
     return (
         <div className="App">
-        
             <BrowserRouter>
                 <Routes>
-                    
                     <Route path='/' element={<Home />} />
-
                     <Route path='/exhibitions' element={<Exhibitions />} />
-
                     <Route path='/exhibitions/:name' element={<ExhibitionCollection />} />
-
                     <Route path='/artwork/:name' element={<Artwork />} />
-
                     <Route path='/Login' element={<Login />} />
-
                     <Route path="*" element={<NoPage />} />
-
                 </Routes>
             </BrowserRouter>
-
         </div>
     );
 }

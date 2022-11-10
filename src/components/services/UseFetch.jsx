@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react';
 
 export default function UseFetch(url) {
     const cache = useRef({});
@@ -27,8 +27,6 @@ export default function UseFetch(url) {
             } catch (error){
                 console.log("error", error)
             }
-
-
         };
 
         fetchData();
