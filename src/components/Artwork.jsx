@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import Layout from './Layout';
 import './Artwork.css';
 import UseFetch from './services/UseFetch';
-import AdditionalImage from './AdditonalImage';
 import { useParams } from 'react-router-dom'
 import Loader from './Loader';
 
@@ -20,18 +19,13 @@ function Artwork() {
     const [ imageSrc, setImageSrc ] = useState()
     const [ isExpanded, setExpanded ] = useState(false)
 
-    console.log(status)
-    console.log(data)
-    console.log(imageSrc)
-
     useEffect(() => {
         if (status === 'fetched'){
             setImageSrc(data.primaryImage)
         }
      
-    }, [status])
+    }, [status, data.primaryImage])
     
-
     const handleBookmarked = () => {
         setBookmarked(!isBookmarked)
     }
@@ -39,7 +33,6 @@ function Artwork() {
     const handleExpanded = () => {
         setExpanded(!isExpanded)
     }
-    
 
     return (
         <>
@@ -78,12 +71,6 @@ function Artwork() {
                             className={isBookmarked ? 'fa-solid fa-bookmark' : 'far fa-bookmark'}>
                         </i>
                     </div>
-
-                    {/*       
-                    <div className='additional-images-container'> 
-                        <AdditionalImage />
-                    </div> 
-                    */}
 
                 </section>    
                

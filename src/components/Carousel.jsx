@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import "./Carousel.css";
 import image from '../assets/astronaut-helmet.png'
 import image_2 from '../assets/asteroid.png'

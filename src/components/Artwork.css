@@ -65,6 +65,7 @@ select {
 }
 
 .main-image-container img {
+    width: 90vw;
     max-width: 820px;
     max-height: 95vh;
     object-fit: cover;
