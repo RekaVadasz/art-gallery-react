@@ -6,27 +6,29 @@
     box-sizing: border-box;
     background: transparent;
     font-family: inherit;
-  }
-  a{
+}
+
+a {
     text-decoration: none;
-  }
-  a img {
+}
+
+a img {
     border: none;
-  }
+}
   
-  button,
-  a {
+button,
+a {
     cursor: pointer;
     color: inherit;
-  }
+}
   
-  textarea {
+textarea {
     resize: none;
-  }
+}
   
-  button,
-  textarea,
-  select {
+button,
+textarea,
+select {
     appearance: none !important;
     border-radius: 0;
-  }
+}

@@ -1,22 +1,22 @@
 import React from 'react';
+
 import Layout from './Layout';
-
 import Newsletter from './Newsletter';
-
-import "./Home.css";
 import Carousel from './Carousel';
-import Exhibitions from './Exhibitions'
+import AllExhibitions from './AllExhibitions'
 import Loader from './Loader'
 
+import "./Home.css";
+
 function Home() {
-  return (
-    <Layout>
-      <Loader />
+    return (
+        <Layout>
+        <Loader />
         <Carousel />
-        <Exhibitions />
+        <AllExhibitions />
         <Newsletter />
-    </Layout>
-  )
+        </Layout>
+    )
 }
 
-export default Home
+export default Home;

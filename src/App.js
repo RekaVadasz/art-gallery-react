@@ -1,10 +1,11 @@
 import React from 'react';
-import './reset.css';
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import './reset.css';
+import './App.css';
+
 import Home from './components/Home';
-import Exhibitions from './components/Exhibitions';
+import AllExhibitions from './components/AllExhibitions';
 import Artwork from './components/Artwork';
 import ExhibitionCollection from './components/ExhibitionCollection';
 import Login from './components/Login';
@@ -18,7 +19,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/home' element={<Home />}/>
-                    <Route path='/exhibitions' element={<Exhibitions />} />
+                    <Route path='/exhibitions' element={<AllExhibitions />} />
                     <Route path='/exhibitions/:name' element={<ExhibitionCollection />} />
                     <Route path='/artwork/:name' element={<Artwork />} />
                     <Route path='/Login' element={<Login />} />
