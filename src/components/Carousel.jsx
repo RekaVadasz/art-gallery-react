@@ -1,9 +1,11 @@
 import React from 'react';
+
 import "./Carousel.css";
-import image from '../assets/astronaut-helmet.png'
-import image_2 from '../assets/asteroid.png'
-import image_3 from '../assets/ezgif.com-gif-maker_1.png'
-import image_4 from '../assets/ezgif.com-gif-maker_2.png'
+
+import image from '../assets/astronaut-helmet.png';
+import image_2 from '../assets/asteroid.png';
+import image_3 from '../assets/ezgif.com-gif-maker_1.png';
+import image_4 from '../assets/ezgif.com-gif-maker_2.png';
 
 function Carousel() {
     return (
