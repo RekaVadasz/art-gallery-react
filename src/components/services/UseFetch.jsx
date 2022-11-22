@@ -15,14 +15,12 @@ export default function UseFetch(url) {
                     const data = cache.current[url]; 
                     setData(data);
                     setStatus('fetched');
-                    console.log('cache was not empty')
                 } else {
                     const response = await fetch(url);
                     const data = await response.json();
                     cache.current[url] = data; //save response in cache;
                     setData(data);
                     setStatus('fetched');
-                    console.log('cache was empty')
                 }
             } catch (error){
                 console.log("error", error)

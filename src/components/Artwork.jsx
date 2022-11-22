@@ -1,23 +1,24 @@
 import { React, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Layout from './Layout';
-import './Artwork.css';
-import UseFetch from './services/UseFetch';
 import { useParams } from 'react-router-dom'
-import Loader from './Loader';
 
+import './Artwork.css';
+
+import Layout from './Layout';
+import UseFetch from './services/UseFetch';
+import Loader from './Loader';
 
 function Artwork() {
     
-    const params = useParams()
+    const params = useParams();
     
-    const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${params.name}`
+    const url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${params.name}`;
     
     const navigate = useNavigate();
-    const { status, data } = UseFetch(url)
-    const [ isBookmarked, setBookmarked ] = useState(false)
-    const [ imageSrc, setImageSrc ] = useState()
-    const [ isExpanded, setExpanded ] = useState(false)
+    const { status, data } = UseFetch(url);
+    const [ isBookmarked, setBookmarked ] = useState(false);
+    const [ imageSrc, setImageSrc ] = useState();
+    const [ isExpanded, setExpanded ] = useState(false);
 
     useEffect(() => {
         if (status === 'fetched'){
@@ -28,11 +29,11 @@ function Artwork() {
     
     const handleBookmarked = () => {
         setBookmarked(!isBookmarked)
-    }
+    };
 
     const handleExpanded = () => {
         setExpanded(!isExpanded)
-    }
+    };
 
     return (
         <>

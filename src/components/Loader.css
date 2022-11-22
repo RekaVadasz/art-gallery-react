@@ -17,38 +17,38 @@
     animation: cssAnimation 0s ease-in 2s forwards;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
+}
   
-  .spinner {
+.spinner {
     width: 128px;
     height: 128px;
-    background: url('http://localhost:3000/space-capsule.png') top left no-repeat;
+    background: url('../assets/space-capsule.png') top left no-repeat;
     background-size: contain;
     border-radius: 0%;
     animation: spin-anim 2.5s linear infinite;
-  }
+}
   
-  @keyframes spin-anim {
+@keyframes spin-anim {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
     }
+}
   
-  }
-  
-  @keyframes cssAnimation {
+@keyframes cssAnimation {
     to {
         width:0;
         height:0;
         overflow:hidden;
     }
-  }
-  @-webkit-keyframes cssAnimation {
+}
+
+@-webkit-keyframes cssAnimation {
     to {
         width:0;
         height:0;
         visibility:hidden;
     }
-  }
+}
