@@ -2,7 +2,7 @@
 
 This React project is the website of a fictional art gallery. The data of the artworks is fetched from the public API of the MET Museum. Currently three thematic exhibitions can be "visited" based on customized search queries from the API.
 
-Deployed version: https://visionary-haupia-e1edfb.netlify.app/
+Deployed version: https://gagarin-art-gallery.netlify.app/
 
 ## To see project: 
 
